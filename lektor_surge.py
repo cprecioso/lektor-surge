@@ -10,7 +10,7 @@ class SurgePublisher(Publisher):
         else:
             url = target_url.path
 
-        for line in Command(['surge', '-p', self.output_path, url]):
+        for line in Command(['surge', '-p', self.output_path, '-d', url]):
             yield line
 
 
